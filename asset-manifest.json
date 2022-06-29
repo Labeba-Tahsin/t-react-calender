@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/t-react-calender/static/css/main.f535f9dc.css",
-    "main.js": "/t-react-calender/static/js/main.f09a2ab8.js",
+    "main.css": "/t-react-calender/static/css/main.c0ae9f10.css",
+    "main.js": "/t-react-calender/static/js/main.17cbc97f.js",
     "static/js/787.375d789c.chunk.js": "/t-react-calender/static/js/787.375d789c.chunk.js",
     "index.html": "/t-react-calender/index.html",
-    "main.f535f9dc.css.map": "/t-react-calender/static/css/main.f535f9dc.css.map",
-    "main.f09a2ab8.js.map": "/t-react-calender/static/js/main.f09a2ab8.js.map",
+    "main.c0ae9f10.css.map": "/t-react-calender/static/css/main.c0ae9f10.css.map",
+    "main.17cbc97f.js.map": "/t-react-calender/static/js/main.17cbc97f.js.map",
     "787.375d789c.chunk.js.map": "/t-react-calender/static/js/787.375d789c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f535f9dc.css",
-    "static/js/main.f09a2ab8.js"
+    "static/css/main.c0ae9f10.css",
+    "static/js/main.17cbc97f.js"
   ]
 }
