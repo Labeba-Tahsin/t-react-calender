@@ -130,7 +130,7 @@ export default class Tcalender extends Component {
                                 <div key={i1}>
                                     {row.map((day, i2) => (
                                         <span key={i2} onClick={() => clickDate(moment(new Date(this.state.yr + '-' + moment().month(this.state.monthName).format("M") + '-' + day)))}
-                                            className={i2 % 7 == 0 || i2 % 6 == 0 ? 'red t-weekday' :
+                                            className={i2 % 7 === 0 || i2 % 6 === 0 ? 'red t-weekday' :
                                                 (moment().isSame(new Date(this.state.yr + '-' + moment().month(this.state.monthName).format("M") + '-' + day), 'day')) ? 'today t-weekday' : 't-weekday'}>{day}</span>
                                     ))}
                                 </div>
