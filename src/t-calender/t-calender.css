@@ -23,6 +23,8 @@ button.bt-m {
     font-weight: 600;
 }
 
+
+
 .red {
     color: #D50000;
 }
@@ -32,12 +34,40 @@ button.bt-m {
     color: #fff;
 }
 
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    25% {
+        opacity: .25;
+    }
+
+    50% {
+        opacity: .50;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
 .t-container {
     max-width: 360px;
     font-family: 'Lato', sans-serif;
-    box-shadow: 0px 10px 20px 0px #ddd;
     box-sizing: border-box;
     letter-spacing: normal;
+}
+
+.t-show-days,
+.t-show-months,
+.t-show-years {
+    box-shadow: 0px 10px 20px 0px #ddd;
+}
+
+.animate {
+    animation-name: fadeIn;
+    animation-duration: 1s;
 }
 
 .t-cal-header {
@@ -69,6 +99,12 @@ button.bt-m {
     background-color: #CE93D8;
     color: #000;
     transition: background-color 200ms linear;
+}
+
+.t-month-body .t-weekday.not-hover:hover {
+    background-color: #fff;
+    color: #000;
+    cursor: default;
 }
 
 .t-months-body span,
@@ -120,10 +156,71 @@ button.bt-m {
 }
 
 .t-decade-title {
-    padding: 20px 0px;
+    padding: 16px 0px;
     width: 196px;
     margin: 0 auto;
     text-align: center;
     letter-spacing: 1.2px;
     font-weight: 600;
+}
+
+.t-dark-mood {
+    background: #282828;
+}
+
+.t-dark-mood .t-cal-header {
+    background: #363636;
+}
+
+.t-dark-mood button,
+.t-dark-mood .t-decade-title {
+    color: #ddd;
+}
+
+.t-dark-mood button:hover {
+    color: #000;
+}
+
+.t-dark-mood .t-month-header {
+    color: #b3afaf;
+}
+
+.t-dark-mood .t-month-body {
+    color: #a1a1a1;
+}
+
+.t-dark-mood .red {
+    color: #e33c3c;
+}
+
+.t-dark-mood .t-months-body {
+    color: #b8b8b8;
+}
+
+.t-dark-mood .t-decade-body {
+    color: #b8b8b8;
+}
+
+.t-dark-mood .today {
+    background-color: #58535b;
+    color: #fff;
+}
+
+.t-dark-mood .t-month-body .t-weekday:hover {
+    background-color: #c6c6c6;
+    color: #000;
+    transition: background-color 200ms linear;
+}
+
+.t-dark-mood .t-month-body .t-weekday.not-hover:hover {
+    background-color: #282828;
+    color: #000;
+    cursor: default;
+}
+
+.t-dark-mood .t-months-body span:hover,
+.t-dark-mood .t-decade-body span:hover {
+    background-color: #c6c6c6;
+    color: #000;
+    transition: background-color 200ms linear;
 }

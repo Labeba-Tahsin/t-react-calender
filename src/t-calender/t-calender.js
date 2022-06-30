@@ -106,8 +106,8 @@ export default class Tcalender extends Component {
         }
 
         return (
-            <div className='t-container'>
-                {this.state.showDays && <div className='t-show-days'>
+            <div className={this.props.darkMood ? 't-container t-dark-mood' : 't-container'}>
+                {this.state.showDays && <div className={this.props.animate ? 't-show-days animate' : 't-show-days'}>
                     <div className='t-month-bar t-cal-header '>
                         <div className='bt-l'>
                             <button onClick={() => prevYr(this.state.d)}>{'‹‹'}</button>
@@ -130,8 +130,9 @@ export default class Tcalender extends Component {
                                 <div key={i1}>
                                     {row.map((day, i2) => (
                                         <span key={i2} onClick={() => clickDate(moment(new Date(this.state.yr + '-' + moment().month(this.state.monthName).format("M") + '-' + day)))}
-                                            className={i2 % 7 === 0 || i2 % 6 === 0 ? 'red t-weekday' :
-                                                (moment().isSame(new Date(this.state.yr + '-' + moment().month(this.state.monthName).format("M") + '-' + day), 'day')) ? 'today t-weekday' : 't-weekday'}>{day}</span>
+                                            className={(i2 % 7 === 0 || i2 % 6 === 0) && day ? 'red t-weekday' :
+                                                (moment().isSame(new Date(this.state.yr + '-' + moment().month(this.state.monthName).format("M") + '-' + day), 'day')) ? 'today t-weekday' : day ? 't-weekday' : 't-weekday not-hover'}>{day}</span>
+
                                     ))}
                                 </div>
                             ))
@@ -139,7 +140,7 @@ export default class Tcalender extends Component {
                     </div>
                 </div>
                 }
-                {this.state.showMonths && <div className='t-show-months'>
+                {this.state.showMonths && <div className={this.props.animate ? 't-show-months animate' : 't-show-months'}>
                     <div className='t-yr-header t-cal-header'>
                         <div className='bt-l'>
                             <button onClick={() => navPrevYr(this.state.yr)}>{'‹'}</button>
@@ -163,7 +164,7 @@ export default class Tcalender extends Component {
                 </div>
                 }
                 {
-                    this.state.showYears && <div className='t-show-years'>
+                    this.state.showYears && <div className={this.props.animate ? 't-show-years animate' : 't-show-years'}>
                         <div className='t-decade-header t-cal-header'>
                             <div className='bt-l'>
                                 <button disabled={this.state.yrRange[0][0] === 0} onClick={() => prevDecade(this.state.yrRange[0][0])}>{'‹'}</button>
